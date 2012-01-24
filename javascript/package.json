@@ -1,0 +1,22 @@
+{
+	"author": "Rick Waldron",
+	"name": "Project-Euler",
+	"description": "Project Euler",
+	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"engines": {
+		"node": ">=v0.4.8"
+	},
+	"devDependencies": {
+		"underscore": "*",
+		"jshint": "*",
+		"uglify-js": "*",
+		"colors": "*",
+		"zlib": "*",
+		"dateformat": "*",
+		"benchmark": "*"
+	}
+}
