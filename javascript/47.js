@@ -13,19 +13,19 @@
 // What is the first of these numbers?
 
 var factors = require("./factors"),
-		has = [],
-		k = 134000,
-		cons = 1,
-		target = 4;
+    has = [],
+    k = 134000,
+    cons = 1,
+    target = 4;
 
 while( cons < target ) {
-	k++;
+  k++;
 
-	if ( factors(k, true).length >= 4 ) {
-		cons++;
-	} else {
-		cons = 0;
-	}
+  if ( factors(k, true).length >= 4 ) {
+    cons++;
+  } else {
+    cons = 0;
+  }
 }
 
 k -= 3;

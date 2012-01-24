@@ -1,36 +1,36 @@
 // // Previous design
 // function isPrime( num ) {
-// 	var sqrt = Math.sqrt( num ),
-// 	i = 3;
+//   var sqrt = Math.sqrt( num ),
+//   i = 3;
 //
-// 	if ( num === 1 || (num > 2 && (num % 2) === 0) ) {
-// 		return false;
-// 	} else {
-// 		for ( ; i <= sqrt; i = i + 2 ) {
-// 			if ( num % i === 0 ) {
-// 				return false;
-// 			}
-// 		}
-// 	}
-// 	return true;
+//   if ( num === 1 || (num > 2 && (num % 2) === 0) ) {
+//     return false;
+//   } else {
+//     for ( ; i <= sqrt; i = i + 2 ) {
+//       if ( num % i === 0 ) {
+//         return false;
+//       }
+//     }
+//   }
+//   return true;
 // }
 
 function isPrime( num ) {
-	var sqrt = Math.sqrt( num ),
-	i = 5;
+  var sqrt = Math.sqrt( num ),
+  i = 5;
 
-	if ( num === 1 ||
-			( num > 2 && ((num % 2 === 0) || (num % 3 === 0)) )
-			) {
-		return false;
-	} else {
-		for ( ; i <= sqrt; i = i + 6 ) {
-			if ( num % i === 0 || num % (i + 2) === 0 ) {
-				return false;
-			}
-		}
-	}
-	return true;
+  if ( num === 1 ||
+      ( num > 2 && ((num % 2 === 0) || (num % 3 === 0)) )
+      ) {
+    return false;
+  } else {
+    for ( ; i <= sqrt; i = i + 6 ) {
+      if ( num % i === 0 || num % (i + 2) === 0 ) {
+        return false;
+      }
+    }
+  }
+  return true;
 }
 
 console.assert( !isPrime(1) );
@@ -48,5 +48,5 @@ console.assert( isPrime(3367900313) );
 console.assert( isPrime(5600748293801) );
 
 if ( typeof exports !== "undefined" ) {
-	module.exports = isPrime;
+  module.exports = isPrime;
 }

@@ -11,7 +11,7 @@ calc = require("./calculatesequence");
 
 // javascript cannot produce this number?
 // console.log(
-// 	factorial(100)
+//   factorial(100)
 // );
 
 // Needed BigInt

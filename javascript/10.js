@@ -10,9 +10,9 @@ k = 3;
 
 
 for ( ; k <= ceil; k++ ) {
-	if ( isPrime(k) ) {
-		total += k;
-	}
+  if ( isPrime(k) ) {
+    total += k;
+  }
 }
 
 end = (new Date()).getTime() - start;

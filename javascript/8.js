@@ -22,7 +22,7 @@ var n = ["73167176531330624919225119674426574742355349194934",
 //console.log( n.length );
 
 function productOf( s ) {
-	return new Function("return " + s.split("").join("*") )();
+  return new Function("return " + s.split("").join("*") )();
 }
 
 var products = [],
@@ -35,12 +35,12 @@ greatest = 0;
 //console.log( productOf("55") === 10 );
 
 for ( ; k < len; k++ ) {
-	sample = n.slice(k, k + 5),
-	product = productOf( sample );
+  sample = n.slice(k, k + 5),
+  product = productOf( sample );
 
-	if ( product > greatest ) {
-		greatest = product;
-	}
+  if ( product > greatest ) {
+    greatest = product;
+  }
 }
 
 console.log( greatest );

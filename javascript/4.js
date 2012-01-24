@@ -9,27 +9,27 @@ b = 999,
 palindromes = [];
 
 outer: while( a > 0 ) {
-	inner: while( b > 0 ) {
-		if ( isPalindrome( a * b ) ) {
-			//console.log( a, b, a * b );
-			palindromes.push( a * b );
-			break inner;
-		}
-		b--;
-	}
+  inner: while( b > 0 ) {
+    if ( isPalindrome( a * b ) ) {
+      //console.log( a, b, a * b );
+      palindromes.push( a * b );
+      break inner;
+    }
+    b--;
+  }
 
-	b = 999;
-	a--;
+  b = 999;
+  a--;
 }
 
 palindromes = palindromes.sort(function(a,b) {
-	if ( a < b ) {
-		return -1;
-	}
-	if ( a > b ) {
-		return 1;
-	}
-	return 0;
+  if ( a < b ) {
+    return -1;
+  }
+  if ( a > b ) {
+    return 1;
+  }
+  return 0;
 })
 console.log( palindromes.pop() );
 

@@ -18,32 +18,32 @@ var bigint = require("bigint");
 
 
 function sequence( n ) {
-	var terms = [];
+  var terms = [];
 
-	while( n !== 1 ) {
-		if ( (n % 2) === 0 ) {
-			n = n / 2;
-		} else {
-			n = (n * 3) + 1;
-		}
-		terms.push(n);
-	}
-	return {
-		terms: terms,
-		length: terms.length
-	};
+  while( n !== 1 ) {
+    if ( (n % 2) === 0 ) {
+      n = n / 2;
+    } else {
+      n = (n * 3) + 1;
+    }
+    terms.push(n);
+  }
+  return {
+    terms: terms,
+    length: terms.length
+  };
 }
 
 var longest = 0,
-		ceil = 100,
-		seq, length;
+    ceil = 100,
+    seq, length;
 
 while( --ceil ) {
-	seq = sequence(ceil);
+  seq = sequence(ceil);
 
-	if ( seq.length > longest ) {
-		longest = ceil;
-	}
+  if ( seq.length > longest ) {
+    longest = ceil;
+  }
 }
 
 console.log( longest );

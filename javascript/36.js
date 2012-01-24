@@ -8,24 +8,24 @@
 //(585).toString(2)
 
 var isPalindrome = require("./ispalindrome"),
-		ceil = 1e6 + 1,
-		palindromes = [],
-		sum = 0;
+    ceil = 1e6 + 1,
+    palindromes = [],
+    sum = 0;
 
 
 while( ceil-- ) {
 
-	// console.log( +ceil.toString(2) );
-	if ( isPalindrome( ceil ) &&
-				isPalindrome( ceil.toString(2) ) ) {
-		//console.log( ceil, ceil.toString(2) );
-		palindromes.push( ceil );
-		sum += ceil;
-	}
+  // console.log( +ceil.toString(2) );
+  if ( isPalindrome( ceil ) &&
+        isPalindrome( ceil.toString(2) ) ) {
+    //console.log( ceil, ceil.toString(2) );
+    palindromes.push( ceil );
+    sum += ceil;
+  }
 }
 
 console.log(
-	new Function("return " + palindromes.join("+"))()
+  new Function("return " + palindromes.join("+"))()
 );
 
 

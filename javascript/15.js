@@ -2,7 +2,7 @@ var // Program setup
 factorial = require("./factorial");
 
 function routes( x, y ) {
-	return factorial(x * 2) / factorial(x) / factorial(y);
+  return factorial(x * 2) / factorial(x) / factorial(y);
 }
 
 console.log( routes( 2, 2 ) );

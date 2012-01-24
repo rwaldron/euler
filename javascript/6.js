@@ -2,22 +2,22 @@
 // numbers and the square of the sum.
 
 function sumOfSquares( range ) {
-	var sum = 0;
+  var sum = 0;
 
-	while( range.length ) {
-		sum += Math.pow( range.pop(), 2 );
-	}
+  while( range.length ) {
+    sum += Math.pow( range.pop(), 2 );
+  }
 
-	return sum;
+  return sum;
 }
 
 function squareOfSum( range ) {
-	var sum = 0;
-	while( range.length ) {
-		sum += range.pop();
-	}
+  var sum = 0;
+  while( range.length ) {
+    sum += range.pop();
+  }
 
-	return Math.pow( sum, 2 );
+  return Math.pow( sum, 2 );
 }
 
 
@@ -26,8 +26,8 @@ ceil = 100,
 k = 1;
 
 for ( ; k <= ceil; k++ ) {
-	a.push( k );
-	b.push( k );
+  a.push( k );
+  b.push( k );
 }
 
 
