@@ -9,24 +9,24 @@ me = _.last(__filename.split("/"));
 
 
 fs.readdir(".", function( err, files ) {
-	// console.log( files );
+  // console.log( files );
 
-	files.filter(function( file ) {
-		return !!~file.indexOf(".js") && !~file.indexOf(".json");
-	}).forEach(function( file ) {
+  files.filter(function( file ) {
+    return !!~file.indexOf(".js") && !~file.indexOf(".json");
+  }).forEach(function( file ) {
 
-		var source, out;
+    var source, out;
 
-		if ( !!~file.indexOf(".converted.js") ) {
-			exec("rm " + file);
-		}
+    if ( !!~file.indexOf(".converted.js") ) {
+      exec("rm " + file);
+    }
 
-		if ( file !== me ) {
-			source = fs.readFileSync( file ).toString();
-			//out = fs.openSync( file.replace(".js", ".converted.js"), "w+" );
-			out = fs.openSync( file, "w+" );
+    if ( file !== me ) {
+      source = fs.readFileSync( file ).toString();
+      //out = fs.openSync( file.replace(".js", ".converted.js"), "w+" );
+      out = fs.openSync( file, "w+" );
 
-			fs.writeSync( out, source.replace(/\t/g, "  ") );
-		}
-	});
+      fs.writeSync( out, source.replace(/\t/g, "  ") );
+    }
+  });
 });
